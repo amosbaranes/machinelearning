@@ -1,0 +1,24 @@
+{% load static %}
+{% static "" as base_static %}
+<h3>{{title}}:</h3>
+<div>
+    <h3>Single Corr:</h3>
+    <h3>(original data)</h3>
+    {{ corr_matrix_ss.to_html| safe }}<br/>
+    <h3>(imputed data)</h3>
+    {{ corr_matrix_si.to_html| safe }}<br/>
+    {{ single_stat }}
+</div>
+<br/>
+
+<div>
+    <h3>Dual Corr:</h3>
+    <h3>(original dat)</h3>
+    {{ corr_matrix_ds.to_html| safe }}<br/>
+    <h3>(imputed data)</h3>
+    {{ corr_matrix_di.to_html| safe }}<br/>
+    {{ dual_stat }}
+</div>
+<br/>
+
+

@@ -1,0 +1,28 @@
+{% load static %}
+{% static "" as base_static %}
+<div class="text-left">
+    <h4>Confusion Matrix</h4>
+    {{ conf_mx.to_html| safe  }}
+  <br>
+</div>
+<br/><br/>
+<div class="text-center">
+    <h3>Confusion matrix</h3>
+   <img src="{{ base_static }}introml/data/images/{{chapter_id}}/{{fig_id}}.{{img_type}}" %}" width="750" height="450" />
+  <br>
+</div><br/><br/>
+<div class="text-center">
+    <h3>Confusion matrix - colored</h3>
+   <img src="{{ base_static }}introml/data/images/{{chapter_id}}/{{fig_id_c}}.{{img_type}}" %}" width="750" height="450" />
+  <br>
+</div><br/><br/>
+<div class="text-center">
+    <h3>Confusion matrix - errors</h3>
+   <img src="{{ base_static }}introml/data/images/{{chapter_id}}/{{fig_id_ep}}.{{img_type}}" %}" width="750" height="450" />
+  <br>
+</div><br/><br/>
+<div class="text-center">
+    <h3>Errors exploration</h3>
+   <img src="{{ base_static }}introml/data/images/{{chapter_id}}/{{fig_id_ee}}.{{img_type}}" %}" width="750" height="450" />
+  <br>
+</div><br/><br/>

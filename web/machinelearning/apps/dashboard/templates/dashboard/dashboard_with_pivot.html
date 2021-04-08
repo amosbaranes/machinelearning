@@ -1,0 +1,111 @@
+<head>
+  {% load static %}
+  <meta charset="UTF-8">
+  <title>Dashboard with Flexmonster</title>
+
+
+    <script src="{% static 'js/flexmonster.js' %}"></script>
+
+  <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+  <link rel="stylesheet" href="https://cdn.flexmonster.com/demo.css">
+</head>
+<body>
+<div id="pivot-table-container" data-url="{% url 'dashboard:pivot_data' %}"></div>
+<div id="pivot-chart-container"></div>
+<script>
+
+  function processData(dataset) {
+    var result = []
+    dataset = JSON.parse(dataset);
+    dataset.forEach(item => { result.push(item.fields)});
+    // for (k in result) {alert(k); alert(result[0]['product_category'])}
+    return result;
+}
+
+$.ajax({
+    url: $("#pivot-table-container").attr("data-url"),
+    dataType: 'json',
+    success: function(data) {
+
+        //alert(data)
+        var data_ = processData(data)
+        alert('data_')
+        alert(data_[0]['product_category'])
+
+        new Flexmonster({
+            container: "#pivot-table-container",
+            componentFolder: "https://cdn.flexmonster.com/",
+            width: "100%",
+            height: 430,
+            toolbar: true,
+            report: {
+                dataSource: {
+                    type: "json",
+                    mapping: {
+                                "product_category": {
+                                    "caption": "Product Category",
+                                    "type": "string"
+                                },
+                                "payment_method": {
+                                    "caption": "Payment Method",
+                                    "type": "string"
+                                },
+                                "shipping_cost": {
+                                    "caption": "Shipping Cost",
+                                    "type": "number"
+                                },
+                                "unit_price": {
+                                    "caption": "Unit Price",
+                                    "type": "number"
+                                }
+                            }
+                    data: data_
+                },
+                slice: {}
+            }
+        });
+        new Flexmonster({
+            container: "#pivot-chart-container",
+            componentFolder: "https://cdn.flexmonster.com/",
+            width: "100%",
+            height: 430,
+            //toolbar: true,
+            report: {
+                dataSource: {
+                    type: "json",
+                    mapping: {
+                                "product_category": {
+                                    "caption": "Product Category",
+                                    "type": "string"
+                                },
+                                "payment_method": {
+                                    "caption": "Payment Method",
+                                    "type": "string"
+                                },
+                                "shipping_cost": {
+                                    "caption": "Shipping Cost",
+                                    "type": "number"
+                                },
+                                "unit_price": {
+                                    "caption": "Unit Price",
+                                    "type": "number"
+                                }
+                            }
+                    data: data_
+                },
+                slice: {},
+                "options": {
+                    "viewType": "charts",
+                    "chart": {
+                        "type": "pie"
+                    }
+                }
+            }
+        });
+
+
+    }
+});
+</script>
+</body>
+

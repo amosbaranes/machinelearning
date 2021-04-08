@@ -1,0 +1,23 @@
+{% load static %}
+{% static "" as base_static %}
+
+<h3>{{title}}: for mnist:</h3>
+<div>
+{{ df.to_html| safe  }}
+</div>
+<br/><br/>
+<div>
+{{ some_digit_image.to_html| safe  }}
+</div>
+<br/><br/>
+<div class="text-center">
+    <h3>Image of: {{digit}}</h3>
+   <img src="{{ base_static }}introml/data/images/{{chapter_id}}/{{fig_id}}.{{img_type}}" %}" width="450" height="325" />
+  <br>
+</div>
+<br/><br/>
+<div class="text-center">
+    <h3>Images</h3>
+   <img src="{{ base_static }}introml/data/images/{{chapter_id}}/{{fig_id_10}}.{{img_type}}" %}" width="450" height="325" />
+  <br>
+</div>

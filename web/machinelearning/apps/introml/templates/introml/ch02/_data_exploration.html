@@ -1,0 +1,21 @@
+{% load static %}
+{% static "" as base_static %}
+
+<div class="text-center">
+   <h2>{{title}}</h2><br/>
+
+    <h3 style="color: red">{{fig_name_0}}</h3><br/>
+    <img src="{{ base_static }}introml/data/images/{{chapter_id}}/{{fig_id_0}}.{{img_type}}" %}"
+    width="900" height="650" /><br><br/><br/>
+
+    <h3 style="color: red">{{fig_name_1}}</h3><br/>
+    <img src="{{ base_static }}introml/data/images/{{chapter_id}}/{{fig_id_1}}.{{img_type}}" %}"
+    width="900" height="650" /><br><br/><br/>
+
+    <h3 style="color: red">{{fig_name_2}}</h3><br/>
+    <img src="{{ base_static }}introml/data/images/{{chapter_id}}/{{fig_id_2}}.{{img_type}}" %}"
+    width="900" height="650" /><br><br/><br/>
+    <h3 style="color: red">{{fig_name_3}}</h3><br/>
+    <img src="{{ base_static }}introml/data/images/{{chapter_id}}/{{fig_id_3}}.{{img_type}}" %}"
+    width="900" height="650" /><br>
+</div>

@@ -1,0 +1,13 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block title %}
+  <title>Main</title>
+{% endblock title%}
+
+{% block app_toolbar %}
+    <li class="nav-item">
+      <a class="nav-link" href="{% url 'introml:index' %}">Intor ML</a>
+    </li>
+{% endblock app_toolbar %}
+

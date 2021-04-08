@@ -1,0 +1,30 @@
+{% extends "base_introml.html" %}
+
+{% block app_toolbar %}
+    <li class="nav-item">
+      <a class="nav-link" href="{% url 'introml:index' %}">Intro to ML</a>
+    </li>
+{% endblock app_toolbar %}
+
+{% block sub_app_toolbar %}
+    <li>
+        <select id="cars" class="show_content">
+          <option value="na">---------</option>
+          <option id="get_data" value="get_data" page="plot_gdp_pc_vs_life_satisfaction" chapter="1">
+              Plot GDP/C vs Life satisfaction</option>
+          <option id="get_data1" value="get_data1" page="linear_model" chapter="1">Select a linear model</option>
+          <option id="get_data2" value="get_data2" page="life_satisfaction_several_countries_on_plot" chapter="1">
+              Life Satisfaction Several countries on plot</option>
+          <option id="get_data3" value="get_data3" page="tweaking_model_params_plot" chapter="1">
+              GDP/C vs Life satisfaction (diff params)</option>
+          <option id="get_data4" value="get_data4" page="nonrepresentative_training_data" chapter="1">
+              Nonrepresentative Training Data</option>
+          <option id="get_data5" value="get_data5" page="overfitting_the_training_data" chapter="1">
+              Overfitting the Training Data</option>
+          <option id="get_data6" value="get_data6" page="regularization" chapter="1">
+              Regularization</option>
+          <option id="get_data7" value="get_data7" page="random_charts" chapter="1">
+              Random Charts</option>
+        </select>
+    </li>
+{% endblock sub_app_toolbar %}

@@ -1,0 +1,42 @@
+{% load static %}
+{% static "" as base_static %}
+
+<div>
+
+    <span class="text-left">Number of records in the entire database: {{ row_count_df_s }} </span><br/><br/>
+    <span class="text-left">Number of records in the entire database after removing totally empty records: {{ row_count_df_s_na }} </span><br/><br/>
+    <span class="text-left">Percentage of totally empty records in the entire database: {{ row_count_df_s_per }}% </span><br/><br/>
+
+
+    <span class="text-left">Percentage of missing data in the entire database <u>before</u> removing entirely empty data:
+        {{ df_miss_per }}% </span><br/><br/>
+    <span class="text-left">Percentage of missing data in the entire database <u>after</u> removing entirely empty data:
+        {{ df_na_miss_per }}% </span><br/><br/>
+</div>
+<br/>
+<div class="text-center">
+<h3>{{title}}</h3>
+    <br/>
+    <h4>Single (Source)</h4>
+      Percentage of missing data in the single database: {{ dfs_miss_per }}% <br/>
+      <span class="text-left">Percentage of missing data in the single database after removing entirely empty data:
+        {{ dfs_na_miss_per }}% </span><br/><br/>
+
+      <img src="{{ base_static }}introml/data/images/{{chapter_id}}/{{fig_id_ss}}.png" %}" width="900" height="650" />
+    <br>
+    <br/>
+    <h4>Single (Imputed)</h4>
+      <img src="{{ base_static }}introml/data/images/{{chapter_id}}/{{fig_id_si}}.png" %}" width="900" height="650" />
+    <br>
+    <br/>
+    <h4>Dual (Source)</h4>
+      Percentage of missing data in the dual database: {{ dfd_miss_per }}% <br/>
+      <span class="text-left">Percentage of missing data in the dual database after removing entirely empty data:
+        {{ dfd_na_miss_per }}% </span><br/><br/>
+      <img src="{{ base_static }}introml/data/images/{{chapter_id}}/{{fig_id_ds}}.png" %}" width="900" height="650" />
+    <br>
+    <br/>
+    <h4>Dual (Imputed)</h4>
+      <img src="{{ base_static }}introml/data/images/{{chapter_id}}/{{fig_id_di}}.png" %}" width="900" height="650" />
+    <br>
+</div>

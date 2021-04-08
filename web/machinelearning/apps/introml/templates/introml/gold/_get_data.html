@@ -1,0 +1,10 @@
+{% load static %}
+{% static "" as base_static %}
+<h3>{{title}}:</h3>
+<div>
+    <h3>My Excel Data:</h3>
+    {{ df.to_html| safe  }}
+</div>
+<br/>
+
+

@@ -1,0 +1,15 @@
+{% load static %}
+{% static "" as base_static %}
+<h3>{{title}}</h3>
+<div class="text-center">
+   <img src="{{ base_static }}introml/data/images/{{chapter_id}}/{{fig_id1}}.{{img_type}}" %}" width="450" height="325" />
+  <br>
+</div>
+<div class="text-center">
+    Beta's of the regression:
+{{ df_theta_best.to_html| safe  }}
+</div>
+<div class="text-center">
+   <img src="{{ base_static }}introml/data/images/{{chapter_id}}/{{fig_id2}}.{{img_type}}" %}" width="450" height="325" />
+  <br>
+</div>

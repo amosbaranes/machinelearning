@@ -1,0 +1,37 @@
+{% extends "base_introml.html" %}
+
+{% block app_toolbar %}
+    <li class="nav-item">
+      <a class="nav-link" href="{% url 'introml:index' %}">Intro to ML</a>
+    </li>
+{% endblock app_toolbar %}
+
+{% block sub_app_toolbar %}
+    <li>
+        <select id="cars" class="show_content">
+          <option value="na">---------</option>
+          <option id="get_data" value="get_data" page="get_data" chapter="2">Get Data</option>
+          <option id="get_data1" value="get_data1" page="attribute_histogram_plots" chapter="2">Plot Attributes</option>
+          <option id="get_data2" value="get_data2"
+                  page="california_housing_prices_scatter_plot" chapter="2">California Housing Prices</option>
+          <option id="get_data3" value="get_data3" page="data_exploration" chapter="2">Data Exploration</option>
+          <option id="get_data4" value="get_data4" page="prepare_the_data_for_ml" chapter="2_1">Prepare the data for ML</option>
+          <option id="get_data5" value="get_data5" page="custom_transformers" chapter="2_1">
+              Custom Transformers</option>
+          <option id="get_data6" value="get_data6" page="transformation_pipelines_and_scaling" chapter="2_2">
+              Transformation Pipelines & Scaling</option>
+          <option id="get_data7" value="get_data7" page="select_and_train_model" chapter="2_2">
+              Select and Train a Model</option>
+          <option id="get_data8" value="get_data8" page="fine-tune_your_model_grid_search" chapter="2_2">
+              "Fine-Tune: Grid Search</option>
+          <option id="get_data9" value="get_data9" page="predictions_with_saved_model" chapter="2_2">
+              "Predictions with saved model</option>
+          <option id="get_data10" value="get_data10" page="fine-tune_your_model_randomized_search" chapter="2_2">
+              "Fine-Tune: Randomized Search</option>
+          <option id="get_data11" value="get_data11" page="assignment" chapter="2">
+              Assignment</option>
+
+        </select>
+    </li>
+{% endblock sub_app_toolbar %}
+

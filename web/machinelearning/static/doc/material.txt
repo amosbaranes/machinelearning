@@ -1,0 +1,32 @@
+Predictive Analytics with TensorFlow:
+------------------------------------
+> Using RNN ...
+  -- time series
+> Using Reinforcment
+
+
+
+Text Mining with Machine Learning and Python
+--------------------------------------------
+
+
+<a href="https://www.youtube.com/watch?v=GvYYFloV0aA&amp;list=PL8dPuuaLjXtO65LeD2p4_Sb5XQ51par_b">https://www.youtube.com/watch?v=GvYYFloV0aA&amp;list=PL8dPuuaLjXtO65LeD2p4_Sb5XQ51par_b</a>
+
+<p>Books:</p>
+<ul>
+<li>
+<a href="https://sites.google.com/a/drbaranes.com/ac_ml/home/2017_Book_RecurrentNeuralNetworksForShor.pdf?attredirects=0&amp;d=1" target="_blank">Recurrent Neural Networks for Short-Term Load Forecasting</a>
+<a href="https://towardsdatascience.com/market-basket-analysis-978ac064d8c6" target="_blank">Market Basket Analysis</a>
+<a href="https://youtu.be/DFKHh7_zzJc" target="_blank">TensorFlow Full Course</a>
+<a href="https://youtu.be/6g4O5UOH304" target="_blank">TensorFlow 2.0 Full Tutorial - Python Neural Networks for Beginners</a>
+</li>
+</ul>
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,11 @@
+{% load static %}
+{% static "" as base_static %}
+
+
+<p class="text-center">
+<h3>{{title}}</h3>
+</p>
+   <img src="{{ base_static }}introml/data/images/{{chapter_id}}/{{fig_id}}.{{img_type}}" %}" width="900" height="450" />
+  <br>
+    <h3>data was saved to: {{saved_data}}</h3>
+</div>

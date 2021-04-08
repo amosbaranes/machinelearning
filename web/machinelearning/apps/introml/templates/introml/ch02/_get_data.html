@@ -1,0 +1,16 @@
+{% load static %}
+{% static "" as base_static %}
+<h3>{{title}}: for housing:</h3>
+<div>
+{{ df.to_html| safe  }}
+</div>
+<br/>
+<h3>Frequence for the proximity to ocean</h3>
+<div>
+{{ frq.to_html| safe  }}
+</div>
+<br/>
+<h3>Statistics of variables</h3>
+<div>
+{{ describe.to_html| safe  }}
+</div>

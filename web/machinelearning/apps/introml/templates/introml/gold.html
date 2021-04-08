@@ -1,0 +1,17 @@
+{% extends "base_introml.html" %}
+
+{% block app_toolbar %}
+    <li class="nav-item">
+      <a class="nav-link" href="{% url 'introml:index' %}">Intro to ML</a>
+    </li>
+{% endblock app_toolbar %}
+
+{% block sub_app_toolbar %}
+    <li>
+        <select id="cars" class="show_content">
+          <option value="na">---------</option>
+          <option id="get_data" value="get_data" chapter="gold" page="show excel_data">
+              Show Excel Data</option>
+        </select>
+    </li>
+{% endblock sub_app_toolbar %}

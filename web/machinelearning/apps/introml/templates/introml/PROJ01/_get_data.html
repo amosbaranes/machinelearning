@@ -1,0 +1,33 @@
+{% load static %}
+{% static "" as base_static %}
+<h3>{{title}}:</h3>
+<div>
+    <h3>All data:</h3>
+{{ df.to_html| safe  }}
+</div>
+<br/>
+<div>
+    <h3>All data Stat:</h3>
+{{ describe_df.to_html| safe  }}
+</div>
+<br/>
+
+<div>
+    <h3>Single Stat:</h3>
+    <h3>(original data)</h3>
+    {{ describe_ss.to_html| safe }}<br/>
+    <h3>(imputed data)</h3>
+    {{ describe_si.to_html| safe }}
+</div>
+<br/>
+
+<div>
+    <h3>Dual Stat:</h3>
+    <h3>(original dat)</h3>
+    {{ describe_ds.to_html| safe }}<br/>
+    <h3>(imputed data)</h3>
+    {{ describe_di.to_html| safe }}
+</div>
+<br/>
+
+

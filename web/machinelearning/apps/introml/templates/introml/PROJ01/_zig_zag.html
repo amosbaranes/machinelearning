@@ -1,0 +1,39 @@
+{% load static %}
+{% static "" as base_static %}
+
+<h3>zig-zag:</h3>
+<div>>
+<table>
+    <thead>
+      <th></th><th>Original Data</th><th>Original missing %</th><th>Zig-Zag Data</th><th>Zig-Zag missing %</th>
+    </thead>
+    <tbody>
+    <tr><td>Single</td><td>{{sd_shape}}</td><td>{{sd_miss_per}}</td><td>{{sd_zz_shape}}</td><td>{{sdz_miss_per}}</td></tr>
+    <tr><td>Dual</td><td>{{ dd_shape }}</td><td>{{dd_miss_per}}</td><td>{{dd_zz_shape}}</td><td>{{ddz_miss_per}}</td></tr>
+    </tbody>
+</table>
+
+    <br/>
+    <h4>Single (Source)</h4>
+      <img src="{{ base_static }}introml/data/images/{{chapter_id}}/{{fig_id_ss}}.png" %}" width="900" height="650" />
+    <br>
+    <br/>
+    <h4>Single (ZZ)</h4>
+      <img src="{{ base_static }}introml/data/images/{{chapter_id}}/{{fig_id_sszz}}.png" %}" width="900" height="650" />
+    <br>
+    <h4>Single (ZZI)</h4>
+      <img src="{{ base_static }}introml/data/images/{{chapter_id}}/{{fig_id_sszzi}}.png" %}" width="900" height="650" />
+    <br>
+
+    <br/>
+    <h4>Dual (Source)</h4>
+      <img src="{{ base_static }}introml/data/images/{{chapter_id}}/{{fig_id_ds}}.png" %}" width="900" height="650" />
+    <br>
+    <br/>
+    <h4>Dual (ZZ)</h4>
+      <img src="{{ base_static }}introml/data/images/{{chapter_id}}/{{fig_id_dszz}}.png" %}" width="900" height="650" />
+    <br>
+    <h4>Dual (ZZI)</h4>
+      <img src="{{ base_static }}introml/data/images/{{chapter_id}}/{{fig_id_dszzi}}.png" %}" width="900" height="650" />
+    <br>
+</div>

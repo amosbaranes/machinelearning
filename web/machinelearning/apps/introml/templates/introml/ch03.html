@@ -1,0 +1,41 @@
+{% extends "base_introml.html" %}
+
+{% block app_toolbar %}
+    <li class="nav-item">
+      <a class="nav-link" href="{% url 'introml:index' %}">Intro to ML</a>
+    </li>
+{% endblock app_toolbar %}
+
+{% block sub_app_toolbar %}
+    <li>
+        <select id="cars" class="show_content">
+          <option value="na">---------</option>
+          <option id="get_data" value="get_data" page="get_data" chapter="3">Get Data</option>
+          <option id="get_data1" value="get_data1" page="training_binary_classifier" chapter="3">
+              Training a Binary Classifier</option>
+          <option id="get_data2" value="get_data2" page="confusion_matrix" chapter="3">Confusion Matrix</option>
+          <option id="get_data3" value="get_data3" page="comparison_roc" chapter="3">SGD vs. RF</option>
+          <option id="get_data4" value="get_data4" page="error_analysis" chapter="3">Error Analysis</option>
+          <option id="get_data5" value="get_data5" page="multilabel_classification" chapter="3">Multilabel Classification</option>
+        </select>
+    </li>
+{% endblock sub_app_toolbar %}
+
+{% block body %}
+<h3>{{title}}</h3>
+<div>
+    <a href="#" id="get_data1" value="get_data1" data-page="show_symbol_data_funds" data-chapter="p2" class="show_content">
+             <span class="badge badge-pill badge-primary">Funds</span></a>
+    <a href="#" id="get_data2" value="get_data2" data-page="show_symbol_data_sandp" data-chapter="p2" class="show_content">
+             <span class="badge badge-pill badge-primary">S&P</span></a>
+    <a href="#" id="get_data3" value="get_data3" data-page="show_symbol_data_nyse" data-chapter="p2" class="show_content">
+             <span class="badge badge-pill badge-primary">NYSE</span></a>
+    <a href="#" id="get_data4" value="get_data4" data-page="show_symbol_data_amex" data-chapter="p2" class="show_content">
+             <span class="badge badge-pill badge-primary">AMEX</span></a>
+    <a href="#" id="get_data5" value="get_data5" data-page="show_symbol_data_nasdaq" data-chapter="p2" class="show_content">
+             <span class="badge badge-pill badge-primary">NASDAQ</span></a>
+</div>
+
+<div id="page_content">
+</div>
+{% endblock body%}

@@ -1,0 +1,60 @@
+{% extends "base.html" %}
+
+{% block title %}
+  <title>introml</title>
+{% endblock title%}
+
+{% block app_toolbar %}
+    <li class="nav-item">
+      <a class="nav-link" href="{% url 'main:home' %}">Main</a>
+    </li>
+{% endblock app_toolbar %}
+
+{% block sub_app_toolbar %}
+{% endblock sub_app_toolbar %}
+
+{% block body %}
+<h3>{{title}}</h3>
+<div id="page_content">
+</div>
+{% endblock body%}
+
+{% block domready %}
+  $('a.show_content').click(function(e){
+    e.preventDefault();
+      // alert(e.target.outerHTML)
+      $.post('{% url "introml:show_content" %}',
+        {
+          page: $(this).data('page'),
+          chapter: $(this).data('chapter')
+        },
+        function(data){
+            $('#page_content').empty().append(data)
+        }
+      );
+  });
+
+  $('select.show_content').change(function(e){
+   e.preventDefault();
+   s = e.target
+   // alert(s.outerHTML)
+   var id = s.getAttribute("id")
+   var so = document.getElementById(id);
+   var o = document.getElementById(so.value);
+   //alert(o.outerHTML)
+      $.post('{% url "introml:show_content" %}',
+        {
+          page: o.getAttribute("page"),
+          chapter: o.getAttribute("chapter")
+        },
+        function(data){
+            $('#page_content').empty().append(data)
+        }
+      );
+  });
+
+
+
+
+
+{% endblock %}

@@ -1,0 +1,38 @@
+{% load static %}
+{% static "" as base_static %}
+<br/><br/>
+<div class="text-left">
+    <h4>Confusion Matrix</h4>
+    {{ confusion_matrix_.to_html| safe  }}
+  <br>
+</div>
+
+<br/><br/>
+<div class="text-left">
+    <h4>Precision and Recall</h4>
+    <h4>Precision</h4>
+    {{ precision_score_  }}%<br/><br/>
+    <h4>Recall</h4>
+    {{ recall_score_  }}%<br/><br/>
+    <h4>f1_score</h4>
+    {{ f1_score_  }}%<br/><br/>
+    <h4>ROC AUC Score</h4>
+    {{ roc_auc_score_ }}%
+  <br>
+</div>
+<br/><br/>
+<div class="text-center">
+    <h3>Recall Precision Threshold</h3>
+   <img src="{{ base_static }}introml/data/images/{{chapter_id}}/{{fig_id_1}}.{{img_type}}" %}" width="750" height="450" />
+  <br>
+</div><br/><br/>
+<div class="text-center">
+    <h3>Recall vs. Precision</h3>
+   <img src="{{ base_static }}introml/data/images/{{chapter_id}}/{{fig_id_2}}.{{img_type}}" %}" width="750" height="750" />
+  <br>
+</div><br/><br/>
+<div class="text-center">
+    <h3>Receiver Operating Characteristic - ROC</h3>
+   <img src="{{ base_static }}introml/data/images/{{chapter_id}}/{{fig_id_3}}.{{img_type}}" %}" width="750" height="750" />
+  <br>
+</div>

@@ -1,0 +1,33 @@
+{% extends "base_introml.html" %}
+
+{% block sub_app_toolbar %}
+    <li class="nav-item">
+      <a class="nav-link" href="{% url 'introml:ch01' %}">CH01</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="{% url 'introml:ch02' %}">CH02</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="{% url 'introml:ch03' %}">CH03</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="{% url 'introml:ch04' %}">CH04</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="{% url 'introml:proj01' %}">PROJ01</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="{% url 'introml:proj02' %}">PROJ02</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="{% url 'introml:gold' %}">Gold</a>
+    </li>
+{% endblock sub_app_toolbar %}
+
+{% block body %}
+<br/>
+<br/>
+<br/>
+<br/>
+<h1>Welcome to the Intro ml app</h1>
+{% endblock body %}
